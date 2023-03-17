@@ -1,0 +1,28 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<form method="post">
+  <h2>Edit Users</h2>
+  
+      {% for user in users %}
+
+          <lable class="">id</lable>
+          <input type="text" class="form-control" value="{{ user.id }}" readonly></input><br>
+
+          <lable class="" >Name</lable>
+          <input type="text" class="form-control" value="{{ user.name }}" name="name" ></input><br>
+         
+
+          <lable class="" >Email</lable>
+          <input type="text" class="form-control" value="{{ user.email }}" name="email"></input><br>
+
+      {% endfor %}
+    </tbody>
+  </table>
+    <div class="form-group  float-end ">
+                        <input type="submit" value="Lưu lại" class="btn btn-success">
+                        <a href="index.php?controller=admin&action=user" class="btn btn-warning ">Quay lại</a>
+    </div>
+</form>
+  
+{% endblock %}

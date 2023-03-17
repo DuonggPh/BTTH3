@@ -1,0 +1,12 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+  <h1>User Details</h1>
+  <p>Name: {{ user.name }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Password: {{ user.password }}</p>
+  <p>
+    <a href="{{ url('user.edit', {'id': user.id}) }}">Edit</a>
+    <a href="{{ url('user.delete', {'id': user.id}) }}" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+  </p>
+{% endblock %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="{{ url('user.index') }}">Home</a></li>
+        <li><a href="{{ url('user.create') }}">New User</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

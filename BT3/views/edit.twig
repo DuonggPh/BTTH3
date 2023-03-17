@@ -1,0 +1,14 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+  <h1>Edit User Details</h1>
+  <form method="POST" action="{{ url('user.update', {'id': user.id}) }}">
+    <label>Name</label>
+    <input type="text" name="name" value="{{ user.name }}" required><br>
+    <label>Email</label>
+    <input type="email" name="email" value="{{ user.email }}" required><br>
+    <label>Password</label>
+    <input type="password" name="password" value="{{ user.password }}" required><br>
+    <input type="submit" value="Save Changes">
+  </form>
+{% endblock %}
